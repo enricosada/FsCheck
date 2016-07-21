@@ -570,10 +570,13 @@ module Arb =
                                         OutOfMemoryException()
 #if PCL
 #else
+#if NETSTANDARD1_6
+#else
                                         NotFiniteNumberException()
+                                        StackOverflowException()
+#endif
                                         IO.DirectoryNotFoundException()
                                         IO.FileLoadException()
-                                        StackOverflowException()
                                         KeyNotFoundException()
                                         IO.PathTooLongException()
 #endif
