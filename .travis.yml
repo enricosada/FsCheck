@@ -35,8 +35,9 @@ install:
 script:
   # dotnet info
   - dotnet --info
-  # build
-  - ./build.sh GenerateDocs
+  - dotnet restore
+  - cd tests/FsCheck.Test
+  - dotnet test
 
 cache:
   directories:
