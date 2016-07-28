@@ -38,7 +38,7 @@ script:
   #- dotnet restore
   #- cd tests/FsCheck.Test
   #- dotnet test
-  - build Build.NetCore2
+  - ./build.sh Build.NetCore2
 
 cache:
   directories:
