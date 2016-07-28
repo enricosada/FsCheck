@@ -261,6 +261,13 @@ Target "Nuget.AddNetCore" (fun _ ->
 
 )
 
+Target "Build.NetCore2" (fun _ ->
+    shellExec "dotnet" "restore" "."
+    shellExec "dotnet" "--verbose pack --configuration Release" "src/FsCheck"
+    shellExec "dotnet" "--verbose pack --configuration Release" "src/FsCheck.Xunit"
+    shellExec "dotnet" "--verbose pack --configuration Release" "src/FsCheck.NUnit"
+)
+
 // --------------------------------------------------------------------------------------
 // Run all targets by default. Invoke 'build <Target>' to override
 

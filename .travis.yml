@@ -35,9 +35,10 @@ install:
 script:
   # dotnet info
   - dotnet --info
-  - dotnet restore
-  - cd tests/FsCheck.Test
-  - dotnet test
+  #- dotnet restore
+  #- cd tests/FsCheck.Test
+  #- dotnet test
+  - build Build.NetCore2
 
 cache:
   directories:
