@@ -38,6 +38,7 @@ script:
   #- dotnet restore
   #- cd tests/FsCheck.Test
   #- dotnet test
+  - echo Name: $TRAVIS_OS_NAME
   - ./build.sh Build.NetCore2
 
 cache:
